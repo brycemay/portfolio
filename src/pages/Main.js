@@ -2,15 +2,21 @@ import React, { Component } from "react";
 import "../App.css";
 import styled from "styled-components";
 import Layout from "../Layout";
+
 import Reactlogo from "../images/reactlogo.png";
 import Crud from "../images/crud.png";
 import Nodelogo from "../images/nodejs.png";
-import Zoom from "react-reveal/Zoom";
-import Roll from "react-reveal/Roll";
+import Htmllogo from "../images/htmllogo.png";
+import Csslogo from "../images/css3logo.png"
 import Mongologo from "../images/mongodb.png";
 import Linkedinlogo from "../images/LinkedInLogo.png";
 import Github from "../images/githublogo.png";
+
+import Zoom from "react-reveal/Zoom";
+import Roll from "react-reveal/Roll";
 import Mailto from "react-protected-mailto";
+import { Link } from "react-scroll";
+
 
 const Content = styled.p`
   color: grey;
@@ -54,6 +60,48 @@ export default class Main extends Component {
     return (
       <div className="mainpage">
         <Content>
+          <navbar className="navbar">
+            <Link
+              activeClass="active"
+              to="about"
+              spy={true}
+              smooth={true}
+              offset={-170}
+              duration={300}
+            >
+              <button className="myButton">About</button>
+            </Link>
+            <Link
+              activeClass="active"
+              to="projects"
+              spy={true}
+              smooth={true}
+              offset={-170}
+              duration={300}
+            >
+              <button className="myButton">Projects</button>
+            </Link>
+            <Link
+              activeClass="active"
+              to="experience"
+              spy={true}
+              smooth={true}
+              offset={-170}
+              duration={300}
+            >
+              <button className="myButton">Skills</button>
+            </Link>
+            <Link
+              activeClass="active"
+              to="contact"
+              spy={true}
+              smooth={true}
+              offset={-200}
+              duration={300}
+            >
+              <button className="myButton">Contact</button>
+            </Link>
+          </navbar>
           <Welcome>
             {" "}
             <h1>
@@ -67,7 +115,7 @@ export default class Main extends Component {
             </h1>
           </Welcome>
 
-          <AbtMe>
+          <AbtMe id="about">
             <Zoom right>
               <h1>About Bryce</h1>
             </Zoom>
@@ -96,7 +144,7 @@ export default class Main extends Component {
 
           <hr />
 
-          <Projs>
+          <Projs id="projects">
             <Zoom right>
               <h1>Projects</h1>
             </Zoom>
@@ -115,32 +163,23 @@ export default class Main extends Component {
 
           <hr />
 
-          <Exp>
-            <Zoom right>
-              <h1>Experienced With</h1>
-            </Zoom>
-            <Roll>
-              {" "}
-              <img src={Reactlogo} alt="" width={170} height={120} />
-            </Roll>
-            <Roll>
-              {" "}
-              <img src={Nodelogo} alt="" width={170} height={120} />
-            </Roll>
-            <Roll>
-              {" "}
-              <img src={Mongologo} alt="" width={170} height={120} />
-            </Roll>
+          <Exp id="experience">
+            <h1>Skills</h1>{" "}
+            <img src={Reactlogo} alt="" width={170} height={120} />{" "}
+            <img src={Nodelogo} alt="" width={170} height={120} />{" "}
+            <img src={Mongologo} alt="" width={170} height={120} />{" "}
+            <img src={Htmllogo} alt="" width={170} height={120} />
+            <img src={Csslogo} alt="" width={170} height={120} />
           </Exp>
           <hr />
-          <Contact>
+          <Contact id="contact">
             <h1> Contact </h1>
             <p>
               Contact me with any questions or comments. I'd be happy to get
               back to you as soon as I can!
             </p>{" "}
             <p>
-              Phone: <Mailto tel="907-617-9895" />
+              Phone: 907-617-9895
               <br />
               Email:{" "}
               <Mailto
