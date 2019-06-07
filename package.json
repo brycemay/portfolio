@@ -3,9 +3,16 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "animejs": "^3.0.1",
     "react": "^16.8.6",
+    "react-animation": "^1.0.9",
     "react-dom": "^16.8.6",
-    "react-scripts": "3.0.1"
+    "react-mailto": "^0.4.0",
+    "react-parallax": "^2.2.0",
+    "react-protected-mailto": "^1.0.3",
+    "react-reveal": "^1.2.2",
+    "react-scripts": "3.0.1",
+    "styled-components": "^4.2.0"
   },
   "scripts": {
     "start": "react-scripts start",
