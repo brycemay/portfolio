@@ -19,7 +19,7 @@ import { Link } from "react-scroll";
 
 
 const Content = styled.p`
-  color: grey;
+  color: black;
   font-size: 20px;
   margin-left: 35vw;
   font-family: "Comfortaa", cursive;
@@ -107,7 +107,8 @@ export default class Main extends Component {
             <h1>
               {" "}
               <span Style="color: crimson">
-                <Roll left cascade>
+                <Roll left cascade
+                duration ={2500}>
                   Welcome
                 </Roll>{" "}
               </span>
@@ -121,9 +122,11 @@ export default class Main extends Component {
             </Zoom>
 
             <p>
-              I am a Full-Stack Web Developer, looking to learn more and expand
+              I am a Full-Stack Web Developer, looking to expand
               my knowledge in the field. Still new, I'm trying to learn as much
               as I can and am looking forward to my future in web development.
+              <span Text='underlined'> I'm also a graduate</span> from the Helio Training Full-Stack Immersive
+              Course in Salt Lake City, Utah.
             </p>
 
             <p>
@@ -131,7 +134,7 @@ export default class Main extends Component {
               tell <br />
               you how intrigued and passionate I am with code. I love learning
               it and understanding how it all works and ties together. I do it
-              as often <br /> as I can when I'm at home.
+              as often <br /> as I can in my free time.
             </p>
 
             <p>
@@ -164,7 +167,7 @@ export default class Main extends Component {
           <hr />
 
           <Exp id="experience">
-            <h1>Skills</h1>{" "}
+           <Zoom right><h1>Skills</h1>{" "}</Zoom>
             <img src={Reactlogo} alt="" width={170} height={120} />{" "}
             <img src={Nodelogo} alt="" width={170} height={120} />{" "}
             <img src={Mongologo} alt="" width={170} height={120} />{" "}
@@ -173,7 +176,7 @@ export default class Main extends Component {
           </Exp>
           <hr />
           <Contact id="contact">
-            <h1> Contact </h1>
+            <Zoom right><h1> Contact </h1></Zoom>
             <p>
               Contact me with any questions or comments. I'd be happy to get
               back to you as soon as I can!
