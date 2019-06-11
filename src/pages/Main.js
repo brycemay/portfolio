@@ -7,16 +7,14 @@ import Reactlogo from "../images/reactlogo.png";
 import Crud from "../images/crud.png";
 import Nodelogo from "../images/nodejs.png";
 import Htmllogo from "../images/htmllogo.png";
-import Csslogo from "../images/css3logo.png"
+import Csslogo from "../images/css3logo.png";
 import Mongologo from "../images/mongodb.png";
 import Linkedinlogo from "../images/LinkedInLogo.png";
 import Github from "../images/githublogo.png";
 
-import Zoom from "react-reveal/Zoom";
 import Roll from "react-reveal/Roll";
 import Mailto from "react-protected-mailto";
 import { Link } from "react-scroll";
-
 
 const Content = styled.p`
   color: black;
@@ -25,33 +23,29 @@ const Content = styled.p`
   font-family: "Comfortaa", cursive;
   padding: 30px;
 `;
+const Welcome = styled.div`
+  font-size: 40px
+  margin-bottom: 10px;
+  margin-top: 3em;  
+  font-family: 'Baloo', cursive;
+`;
+const AbtMe = styled.div`
+  margin-bottom: 15em;
+  margin-top: 10em;
+`;
 
 const Projs = styled.div`
   margin-bottom: 10em;
   margin-top: 10em;
-  font-size: 35px;
 `;
 
 const Exp = styled.div`
-  margin-bottom: 10em;
-  margin-top: 10em;
-  font-size: 35px;
-`;
-
-const AbtMe = styled.div`
-  margin-bottom: 15em;
+  margin-bottom: 20em;
   margin-top: 15em;
-`;
-
-const Welcome = styled.div`
-font-size: 40px
-  margin-bottom: 10em;
-  margin-top: 5em;  
 `;
 
 const Contact = styled.div`
   margin-top: 10em;
-  font-size: 25px;
   margin-bottom: 10em;
 `;
 
@@ -60,7 +54,35 @@ export default class Main extends Component {
     return (
       <div className="mainpage">
         <Content>
-          <navbar className="navbar">
+          <Welcome>
+            {" "}
+            <h1>
+              {" "}
+              <span Style="color: crimson">
+                <Roll left cascade duration={2500}>
+                  Welcome
+                </Roll>{" "}
+              </span>
+              to my Portfolio
+            </h1>
+            <div class="container">
+              <Link
+                activeClass="active"
+                to="about"
+                spy={true}
+                smooth={true}
+                offset={-170}
+                duration={800}
+              > 
+                <a href="#about">
+                  <div class="arrow" /> 
+                </a>
+              </Link>
+            </div>
+            <div id="full" />
+          </Welcome>
+
+          <ul className="ul">
             <Link
               activeClass="active"
               to="about"
@@ -69,7 +91,11 @@ export default class Main extends Component {
               offset={-170}
               duration={300}
             >
-              <button className="myButton">About</button>
+              <li className="li">
+                <a class="active" href="#about">
+                  About
+                </a>
+              </li>{" "}
             </Link>
             <Link
               activeClass="active"
@@ -79,7 +105,9 @@ export default class Main extends Component {
               offset={-170}
               duration={300}
             >
-              <button className="myButton">Projects</button>
+              <li className="li">
+                <a href="#projects">Projects</a>
+              </li>
             </Link>
             <Link
               activeClass="active"
@@ -89,69 +117,63 @@ export default class Main extends Component {
               offset={-170}
               duration={300}
             >
-              <button className="myButton">Skills</button>
+              <li className="li">
+                <a href="#skills">Skills</a>
+              </li>
             </Link>
             <Link
               activeClass="active"
               to="contact"
               spy={true}
               smooth={true}
-              offset={-200}
+              offset={-170}
               duration={300}
             >
-              <button className="myButton">Contact</button>
+              <li className="li">
+                <a href="#contact">Contact</a>
+              </li>
             </Link>
-          </navbar>
-          <Welcome>
-            {" "}
-            <h1>
-              {" "}
-              <span Style="color: crimson">
-                <Roll left cascade
-                duration ={2500}>
-                  Welcome
-                </Roll>{" "}
-              </span>
-              to my Portfolio
-            </h1>
-          </Welcome>
+          </ul>
 
           <AbtMe id="about">
-            <Zoom right>
-              <h1>About Bryce</h1>
-            </Zoom>
+            <h1 className="mainheaders">About Bryce</h1>
 
             <p>
-              I am a Full-Stack Web Developer, looking to expand
-              my knowledge in the field. Still new, I'm trying to learn as much
-              as I can and am looking forward to my future in web development.
-              <span Text='underlined'> I'm also a graduate</span> from the Helio Training Full-Stack Immersive
-              Course in Salt Lake City, Utah.
+              I am a Full-Stack Web Developer, looking to expand my knowledge in
+              the field. Still new, I'm trying to learn as much as I can and am
+              looking forward to my future in web development.
+              <span Text="underlined"> I'm a graduate</span> from the Helio
+              Training Full-Stack Immersive Course in Salt Lake City, Utah.
             </p>
 
             <p>
               In early 2019 I decided to find a new career path, and I can't
               tell <br />
               you how intrigued and passionate I am with code. I love learning
-              it and understanding how it all works and ties together. I do it
-              as often <br /> as I can in my free time.
+              it and understanding how it all works and ties together. I code
+              when <br /> in my freetime at home.
             </p>
 
             <p>
-              I come from a construction background, but as you can probably{" "}
-              <br /> tell, I've made the the switch to the tech world. It's the
-              best decision <br /> I've made. I'm originally from Ketchikan,
-              Alaska, and I have recently moved to Utah.
+              I come from a construction background, but as you can <br /> tell
+              I've made the the switch to the tech world. It's the best decision{" "}
+              <br /> I've made. I'm originally from Ketchikan, Alaska and I have
+              recently moved to Utah.
             </p>
           </AbtMe>
 
           <hr />
 
           <Projs id="projects">
-            <Zoom right>
-              <h1>Projects</h1>
-            </Zoom>
+            <h1 className="mainheaders">Projects</h1>
+
             <h6>ToDo List</h6>
+            <p className="crudparagraph">
+              {" "}
+              For this project I used <br />
+              react.js, Express, Node, <br />
+              and MongoDB.
+            </p>
             <a href="https://thawing-reaches-34753.herokuapp.com/">
               {" "}
               <img
@@ -167,7 +189,7 @@ export default class Main extends Component {
           <hr />
 
           <Exp id="experience">
-           <Zoom right><h1>Skills</h1>{" "}</Zoom>
+            <h1 className="mainheaders">Skills</h1>{" "}
             <img src={Reactlogo} alt="" width={170} height={120} />{" "}
             <img src={Nodelogo} alt="" width={170} height={120} />{" "}
             <img src={Mongologo} alt="" width={170} height={120} />{" "}
@@ -176,7 +198,7 @@ export default class Main extends Component {
           </Exp>
           <hr />
           <Contact id="contact">
-            <Zoom right><h1> Contact </h1></Zoom>
+            <h1 className="mainheaders"> Contact </h1>
             <p>
               Contact me with any questions or comments. I'd be happy to get
               back to you as soon as I can!
