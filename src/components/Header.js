@@ -12,6 +12,9 @@ const Title = styled.h2`
   margin-top: -10px;
   padding: 15px;
   font-family: 'Comfortaa', cursive;
+  @media (max-width: 800px) and (min-width: 481px) {
+    margin-top 4vw;
+  }
 `;
 
 const Desc = styled.p`
@@ -20,6 +23,7 @@ const Desc = styled.p`
   color: black;
   text-align: center;
   opacity: 0.5;
+
 `;
 
 class Header extends React.Component {
@@ -41,6 +45,7 @@ class Header extends React.Component {
             Web Developer <br />
             </Desc>
           </Title>
+          
         </div>
         <Footer />
       </header>

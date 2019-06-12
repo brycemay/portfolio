@@ -7,6 +7,9 @@ const Title = styled.h2`
   text-align: center;
   color: white;
   margin-top: 13em;
+  @media (max-width: 800px) and (min-width: 481px) {
+    margin-top 30vw;
+  }
 `;
 
 class Footer extends React.Component {
@@ -15,7 +18,8 @@ class Footer extends React.Component {
       <header>
         <div>
           <Title>
-            © Bryce May 2019 <br />
+            © Bryce May 2019 <br />Portfolio made with React.JS <br />
+            
             <a href="https://www.github.com/brycemay/">
               <img className="socmedia" src={Github} alt="" />{" "}
             </a>

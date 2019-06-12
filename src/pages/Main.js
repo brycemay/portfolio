@@ -19,34 +19,66 @@ import { Link } from "react-scroll";
 const Content = styled.p`
   color: black;
   font-size: 20px;
-  margin-left: 35vw;
+  margin-left: 425px;
   font-family: "Comfortaa", cursive;
   padding: 30px;
+  @media (max-width: 480px) {
+    font-size: 18px;
+    margin-left: 0vw;
+    padding: 5px;
+  }
+  @media ( max-width: 800px ) and ( min-width: 481px ) {
+    margin-left: 0px;
+  }
 `;
 const Welcome = styled.div`
   font-size: 40px
   margin-bottom: 10px;
   margin-top: 3em;  
   font-family: 'Baloo', cursive;
+  @media (max-width: 480px) {
+    font-size: 27px
+    margin-bottom: -400px;
+    margin-top: 60vh;  
+  }
+
+  @media ( max-width: 800px ) and ( min-width: 481px ) {
+    margin-top: 500px;
+  }
 `;
 const AbtMe = styled.div`
   margin-bottom: 15em;
   margin-top: 10em;
+  @media (max-width: 480px) {
+    margin-bottom: 15em;
+    margin-top: 10em;
+  }
 `;
 
 const Projs = styled.div`
   margin-bottom: 10em;
   margin-top: 10em;
+  @media (max-width: 480px) {
+    margin-bottom: 15em;
+    margin-top: 10em;
+  }
 `;
 
 const Exp = styled.div`
   margin-bottom: 20em;
   margin-top: 15em;
+  @media (max-width: 480px) {
+
+  }
 `;
 
 const Contact = styled.div`
   margin-top: 10em;
   margin-bottom: 10em;
+  @media (max-width: 480px) {
+    margin-top: 20em;
+    margin-bottom: 20em;
+  }
 `;
 
 export default class Main extends Component {
